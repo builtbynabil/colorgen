@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+    <style>
+        body{
+            height: 100%;
+        }
+
+        .hoverOverMe{
+            height: 20px;
+        }
+
+#instructions {
+position: fixed; /* Sit on top of the page content */
+width: 100%; /* Full width (cover the whole page) */
+height: 100%; /* Full height (cover the whole page) */
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0,0,0,0.9); /* Black background with opacity */
+z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+color: white;
+}
+
+.block{
+    background: white;
+    color: black;
+    border-radius: 10px;
+    margin: 30px;
+    padding: 20px;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+        
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="root">
+
+            <div class="hoverOverMe" v-on:click="hideformdiv">
+            </div>
+
+        
+        <div id="instructions">
+            <div class="container">
+                <div class="block">
+                    <h1>Instructions:</h1>
+                    <p>All the text inputs accept HTML colors such as red, green, limegreen or they can accept HEX codes such as #0E0E0E</p>
+                    <p>Click on the top part of the screen to hide the inputs and button</p>
+
+                    <hr>
+
+                    <h1>How to save image?</h1>
+                    <h3>On Computer (Chrome)</h3>
+                    <p>Press F11 and Screenshot</p>
+
+                    <hr>
+
+                    <h3>On Mobile (iOS and Android)</h3>
+                    <p>Screenshot and Crop</p>
+
+                    <hr>
+                    
+                    
+                    <button class="btn btn-primary" @click="closeinstructions">Close</button>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="colorform">
+
+                <div class="row">
+
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="">Color 1</label>
+                            <input type="text" v-model="color1" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="">Color 2 (Optional - For Gradient)</label>
+                            <input type="text" v-model="color2" class="form-control">
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="form-group">
+                    <button @click="updatecolor" class="btn btn-danger">Update Color</button>
+                    <button @click="randomcolor1" class="btn btn-primary ">Random Color 1</button>
+                    <button @click="randomcolor2" class="btn btn-primary ">Random Color 2</button>
+
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
