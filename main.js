@@ -1,4 +1,5 @@
-$("body").css("height", window.outerHeight+100 + "px")
+$("html").css("height", window.outerHeight + "px")
+$("body").css("height", window.outerHeight + "px")
 
 var app = new Vue({
 
