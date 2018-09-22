@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>colorgen by builtbynabil</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -19,11 +19,11 @@
 
     <div class="root">
 
-            <div class="hoverOverMe" v-on:click="hideformdiv">
-            </div>
+        <div class="hoverOverMe" v-on:click="hideformdiv">
+        </div>
 
-        
-        <div id="instructions">
+
+        <!-- <div id="instructions">
             <div class="container">
                 <div class="block">
                     <h1>Instructions:</h1>
@@ -48,7 +48,7 @@
                 </div>
                 
             </div>
-        </div>
+        </div> -->
 
         <div class="container">
 
@@ -60,6 +60,8 @@
                         <div class="form-group">
                             <label for="">Color 1</label>
                             <input type="text" v-model="color1" class="form-control">
+                            <button @click="randomcolor1" class="btn btn-primary btn-sm randombuttons">Random Color 1</button>
+
                         </div>
                     </div>
 
@@ -67,6 +69,8 @@
                         <div class="form-group">
                             <label for="">Color 2 (Optional - For Gradient)</label>
                             <input type="text" v-model="color2" class="form-control">
+                            <button @click="randomcolor2" class="btn btn-primary btn-sm randombuttons">Random Color 2</button>
+
                         </div>
                     </div>
 
@@ -75,9 +79,7 @@
                 </div>
 
                 <div class="form-group">
-                    <button @click="updatecolor" class="btn btn-danger">Update Color</button>
-                    <button @click="randomcolor1" class="btn btn-primary ">Random Color 1</button>
-                    <button @click="randomcolor2" class="btn btn-primary ">Random Color 2</button>
+                    <button @click="updatecolor" class="btn btn-danger">Update Background</button>
 
                 </div>
 
