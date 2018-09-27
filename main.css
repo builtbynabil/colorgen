@@ -3,11 +3,11 @@ html{
 }
 
 .block{
-    background: #0069D9;
+    background: rgba(255,255,255, 0.1);
     border-radius: 20px;
-    margin: 20px;
+    margin: 0px;
     padding: 20px;
-    color: white;
+    color: black;
 }
 
 .clickMe{
