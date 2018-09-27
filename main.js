@@ -1,47 +1,43 @@
-// FIXING HEIGHT BUG REV 5
-
-$("html").css("height", "1000px")
-$("body").css("height", "1000px")
-
 var app = new Vue({
+  el: ".root",
+  data: {
+    title: "bg",
+    input: "",
+    input2: ""
+  },
 
-    el: ".root",
-    data: {
-        "color1": "",
-        "color2": "",
+  methods: {
+    applyBackground() {
+      if (this.input2 == "") {
+        $("body").css("background", this.input);
+      } else {
+        $("body").css(
+          "background-image",
+          "linear-gradient(" + this.input + "," + this.input2 + ")"
+        );
+      }
     },
 
-    methods:{
-        updatecolor(){
-            
-            if(this.color2){
-                console.log("color 2 is here");
-                $("body").css("background-image", "linear-gradient(" + this.color1 + "," + this.color2 + ")")
-            }else{
-                console.log("color 2 is not filled");
-                $("body").css("background-color", app.color1)
+    randomizeInput() {
+      color =
+        "#" +
+        Math.random()
+          .toString(16)
+          .slice(2, 8);
+      this.input = color;
+    },
+    randomizeInput2() {
+      color =
+        "#" +
+        Math.random()
+          .toString(16)
+          .slice(2, 8);
+      this.input2 = color;
+    },
 
-            }
-
-        },
-
-        randomcolor1(){
-            this.color1 = "#" + Math.random().toString(16).slice(2, 8);
-        },
-
-        randomcolor2(){
-            this.color2 = "#" + Math.random().toString(16).slice(2, 8);
-        },
-
-        closeinstructions(){
-            $("#instructions").fadeOut(600);
-        },
-
-        hideformdiv(){
-            $(".colorform").toggle(600);
-
-        }
+    toggleform() {
+        $(".block").slideToggle(500)
     }
     
-})
-
+  }
+});
