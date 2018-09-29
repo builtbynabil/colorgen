@@ -9,7 +9,7 @@ var app = new Vue({
     title: "bg",
     input: "",
     input2: "",
-    version: "1.23",
+    version: "1.30",
   },
 
   methods: {

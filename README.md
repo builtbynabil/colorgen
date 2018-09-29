@@ -30,8 +30,10 @@ Mini changes to the website / Typo error or user interface improvements
 - [x] Better interface to hide the color form [Nothing to do about it]
 - [ ] Integrate color pickers
 
-## Version 1.23
+
+## Version 1.30
 - [x] The apply button is now gone, this is because the website will automatically apply the background as you type (dynamic inputs)
+- [x] Let users informed that they can input HTML color in the instructions page
 
 ## Version 1.22
 - [x] Changed the instructions page
