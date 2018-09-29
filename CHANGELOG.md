@@ -1,3 +1,6 @@
+## Version 2.22
+- [x] Updated ui so that the gradient will be viewed
+
 ## Version 2.21
 - [x] You can now preview the gradients under the 'Generator' section
 
