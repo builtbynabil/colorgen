@@ -1,8 +1,4 @@
-color1 = "#" + Math.random().toString(16 + Math.random() * 0.9).slice(2, 8);
-color2 = "#" + Math.random().toString(16 + Math.random() * 0.9).slice(2, 8);
-$("body").css("background-image", "linear-gradient(" + color1 + "," + color2 + ")");
 
-$(".colorpicker").hide()
 
 var app = new Vue({
   el: ".root",
@@ -10,7 +6,7 @@ var app = new Vue({
     title: "bg",
     input: "",
     input2: "",
-    version: "2.11",
+    version: "2.20",
     r: 0,
     g: 0,
     b: 0,
@@ -25,55 +21,34 @@ var app = new Vue({
       this.colorvalue = "rgba(" + this.r + "," + this.g + "," + this.b + "," + this.alpha + ")"
     },
 
-    applyBackground() {
-      if (this.input2 == "") {
-        $("body").css("background", this.input);
-      } else {
-        $("body").css(
-          "background-image",
-          "linear-gradient(" + this.input + "," + this.input2 + ")"
-        );
-      }
+    applyToInput(){
+      this.input = this.colorvalue
+      this.applyBackground()
     },
 
-    randomizeInput() {
-      color =
-        "#" +
-        Math.random()
-        .toString(16 + Math.random() * 0.9)
-        .slice(2, 8);
-      this.input = color;
+    applyToInput2(){
+      this.input2 = this.colorvalue
+      this.applyBackground()
     },
-    randomizeInput2() {
-      color =
-        "#" +
-        Math.random()
-        .toString(16 + Math.random() * 0.9)
-        .slice(2, 8);
-      this.input2 = color;
+
+    applyBackground() {
+        $("body").css(
+          "background-image",
+          "linear-gradient(" + this.input + "," + this.input2 + ")")
     },
 
     toggleform() {
       $(".block").slideToggle(500)
     },
+
     randomizeBackground() {
-      color1 = "#" + Math.random().toString(16 + Math.random() * 0.9).slice(2, 8);
-      color2 = "#" + Math.random().toString(16 + Math.random() * 0.9).slice(2, 8);
-      $("body").css("background-image", "linear-gradient(" + color1 + "," + color2 + ")");
+      this.input = "rgba(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + this.alpha + ")"
+      this.input2 = "rgba(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + this.alpha + ")"
 
-      this.input = color1
-      this.input2 = color2
+      $("body").css("background-image", "linear-gradient(" + this.input + "," + this.input2 + ")");
 
     },
 
-    togglepicker(){
-      $(".colorpicker").slideToggle()
-    },
-
-    togglegenform(){
-      $(".generatorForm").slideToggle()
-    },
-    
     reverseinputs() {
       firstinput = this.input
       this.input = this.input2
@@ -92,13 +67,17 @@ var app = new Vue({
   },
 
   created() {
-    this.input = color1
-    this.input2 = color2
+    this.input = "rgba(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + this.alpha + ")"
+    this.input2 = "rgba(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + this.alpha + ")"
+
     this.r = Math.floor(Math.random() * 255)
     this.g = Math.floor(Math.random() * 255)
     this.b = Math.floor(Math.random() * 255)
 
-    this.colorvalue = "rgba(" + this.r + "," + this.g + "," + this.b + "," + 1 + ")"
-    $(".showColor").css("background-color", this.colorvalue)
+    this.colorvalue = "rgba(" + this.r + "," + this.g  + "," + this.b + "," + this.alpha + ")"
+    this.updateColor();
+    
+    $("body").css("background-image", "linear-gradient(" + this.input + "," + this.input2 + ")");
+    
   }
 });

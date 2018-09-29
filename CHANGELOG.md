@@ -1,3 +1,8 @@
+## Version 2.20
+- [x] Refactored the code to make it shorter
+- [x] Now you can apply the color codes to specific inputs by pressing either of the 2 buttons on the Color Picker section
+- [x] Removed the ability to toggle (hide or show) the color picker / generator
+
 ## Version 2.11
 - [x] Added two buttons to toggle the color picker and the generator at the same time
 
