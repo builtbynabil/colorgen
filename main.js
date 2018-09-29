@@ -1,3 +1,7 @@
+color1 = "#" + Math.random().toString(16).slice(2, 8);
+color2 = "#" + Math.random().toString(16).slice(2, 8);
+$("body").css("background-image", "linear-gradient(" + color1 + "," + color2 + ")");
+
 var app = new Vue({
   el: ".root",
   data: {

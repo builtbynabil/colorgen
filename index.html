@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 
@@ -19,40 +21,52 @@
         <div class="container">
 
             <div class="clickMe" @click="toggleform"></div>
-            
-            <div class="block">
-                <h1>Instructions</h1>
-                <ol>
-                    <li>Press top of this page to hide the form and press it once again to reveal it!</li>
-                    <li>Screenshot and crop or Press F11 to go in fullscreen mode to get the wallpaper</li>
-                </ol>
 
+            <div class="block">
+
+                
+                <h1> <i class="material-icons">
+                    color_lens
+                </i> colorgen</h1>
+                <small>background randomly generated</small>
+                
                 <hr>
                 
-                <div class="row">
-                
-                    <div class="col">
+                <div class="form-row">
+                    
+                    <div class="col-lg-6 col-sm-12">
                         <label>Enter a color</label>
-                        <input type="text" v-model="input"class="form-control">
+                        <input type="text" v-model="input" class="form-control" placeholder="Enter Color (HEX) Or Randomize The Color">
                         <button @click="randomizeInput" class="btn btn-danger btn-sm">Randomize Color</button>
                     </div>
-                
-                    <div class="col">
+                    
+                    <div class="col-lg-6 col-sm-12">
                         <label>Enter a second color for gradient (Optional)</label>
-                        <input type="text" v-model="input2"class="form-control">
+                        <input type="text" v-model="input2" class="form-control" placeholder="Enter Color (HEX) Or Randomize The Color">
                         <button @click="randomizeInput2" class="btn btn-danger btn-sm">Randomize Color</button>
                     </div>
-                
+                    
                 </div>
-                
+
+                <div class="form-group">
+                    
+                </div>
+
+                <div class="form-group">
+                    
+                </div>
+
+
                 <br>
-                
-                <button @click="applyBackground" class="btn btn-success">Apply Background</button>
+
+                <button @click="applyBackground" class="btn btn-success"> <i class="material-icons">
+                    check_circle
+                </i> Apply Background</button>
 
                 <hr>
-                
-                <h6>Website is made by Nabil @builtbynabil on github and @nab1lll on instagram</h6>
-                
+
+                <h6><a href="https://github.com/builtbynabil/colorgen">Repo Link</a></h6>
+
             </div>
 
         </div>
