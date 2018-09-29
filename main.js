@@ -10,7 +10,7 @@ var app = new Vue({
     title: "bg",
     input: "",
     input2: "",
-    version: "2.10",
+    version: "2.11",
     r: 0,
     g: 0,
     b: 0,
@@ -68,6 +68,9 @@ var app = new Vue({
 
     togglepicker(){
       $(".colorpicker").slideToggle()
+    },
+
+    togglegenform(){
       $(".generatorForm").slideToggle()
     },
     

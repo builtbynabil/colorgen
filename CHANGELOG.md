@@ -1,3 +1,6 @@
+## Version 2.11
+- [x] Added two buttons to toggle the color picker and the generator at the same time
+
 ## Version 2.10
 - [x] Added button to toggle between picker and generator
 - [x] Minor update because its a (quite) big user interface change!
