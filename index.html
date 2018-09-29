@@ -41,21 +41,17 @@
 
                     <div class="col-lg-6 col-sm-12">
                         <label>Enter a color</label>
-                        <input type="text" v-model="input" class="form-control" placeholder="Enter Color (HEX)">
+                        <input type="text" v-model="input" class="form-control" placeholder="Enter Color (HEX)" @input="applyBackground">
                     </div>
 
                     <div class="col-lg-6 col-sm-12">
                         <label>Enter a second color</label>
-                        <input type="text" v-model="input2" class="form-control" placeholder="Enter Color (HEX)">
+                        <input type="text" v-model="input2" class="form-control" placeholder="Enter Color (HEX)" @input="applyBackground">
                     </div>
 
                 </div>
 
                 <br>
-
-                <button @click="applyBackground" class="btn btn-success btn-sm"> <i class="material-icons">
-                        check_circle
-                    </i> Apply</button>
 
                 <button @click="randomizeBackground" class="btn btn-danger btn-sm"> <i class="material-icons">
                         check_circle
