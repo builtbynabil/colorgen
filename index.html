@@ -37,31 +37,28 @@
                     <div class="col-lg-6 col-sm-12">
                         <label>Enter a color</label>
                         <input type="text" v-model="input" class="form-control" placeholder="Enter Color (HEX) Or Randomize The Color">
-                        <button @click="randomizeInput" class="btn btn-danger btn-sm">Randomize Color</button>
                     </div>
                     
                     <div class="col-lg-6 col-sm-12">
-                        <label>Enter a second color for gradient (Optional)</label>
+                        <label>Enter a second color</label>
                         <input type="text" v-model="input2" class="form-control" placeholder="Enter Color (HEX) Or Randomize The Color">
-                        <button @click="randomizeInput2" class="btn btn-danger btn-sm">Randomize Color</button>
                     </div>
                     
                 </div>
 
-                <div class="form-group">
-                    
-                </div>
-
-                <div class="form-group">
-                    
-                </div>
-
-
                 <br>
-
+                
                 <button @click="applyBackground" class="btn btn-success"> <i class="material-icons">
                     check_circle
-                </i> Apply Background</button>
+                </i> Apply</button>
+                
+                <button @click="randomizeBackground" class="btn btn-danger"> <i class="material-icons">
+                    check_circle
+                </i> Randomize</button>
+
+                <button @click="reverseinputs" class="btn btn-warning"> <i class="material-icons">
+                    check_circle
+                </i> Reverse Inputs</button>
 
                 <hr>
 
