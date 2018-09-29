@@ -8,6 +8,14 @@ gradient background generator app created using Vue
 - Press the top of the page to hide the form
 - Screenshot and crop and make it as your new wallpaper
 
+## Version naming convention
+The version naming convention is [maj_u].[min_u][mini_u]
+|Name   |   |   |   |   |
+|---|---|---|---|---|
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+
 ## Todos
 - [x] Improve the site in terms of UX and UI
 - [ ] Make users able to save images [Right click or hold to save image]
