@@ -30,6 +30,11 @@ Mini changes to the website / Typo error or user interface improvements
 - [x] Better interface to hide the color form [Nothing to do about it]
 - [ ] Integrate color pickers
 
+## Version 1.22
+- [x] Changed the instructions page
+- [x] Generates random background on the instructions page
+- [x] Hiding the white box works on the instructions page
+
 ## Version 1.021
 - [x] Link a instruction page
 - [x] Added box shadow to the white block

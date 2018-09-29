@@ -11,7 +11,7 @@ var app = new Vue({
     title: "bg",
     input: "",
     input2: "",
-    version: "1.021"
+    version: "1.22"
   },
 
   methods: {
