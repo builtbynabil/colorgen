@@ -2,8 +2,6 @@ color1 = "#" + Math.random().toString(16 + Math.random() * 0.9).slice(2, 8);
 color2 = "#" + Math.random().toString(16 + Math.random() * 0.9).slice(2, 8);
 $("body").css("background-image", "linear-gradient(" + color1 + "," + color2 + ")");
 
-console.log(color1);
-
 
 var app = new Vue({
   el: ".root",
@@ -11,10 +9,11 @@ var app = new Vue({
     title: "bg",
     input: "",
     input2: "",
-    version: "1.22"
+    version: "1.22",
   },
 
   methods: {
+
     applyBackground() {
       if (this.input2 == "") {
         $("body").css("background", this.input);

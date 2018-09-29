@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 
@@ -25,45 +25,45 @@
             <div class="block">
 
                 <!-- REMEMBER TO ALWAYS UPDATE THE VERSION IN THE MAIN.JS!!! -->
-                
+
                 <h1> <i class="material-icons">
-                    color_lens
-                </i> colorgen v{{version}} </h1>
+                        color_lens
+                    </i> colorgen v{{version}} </h1>
                 <small><a href="instructions.html">Instructions on how to use</a></small>
 
                 <br>
-                
+
                 <small>background randomly generated</small>
-                
+
                 <hr>
-                
+
                 <div class="form-row">
-                    
+
                     <div class="col-lg-6 col-sm-12">
                         <label>Enter a color</label>
                         <input type="text" v-model="input" class="form-control" placeholder="Enter Color (HEX)">
                     </div>
-                    
+
                     <div class="col-lg-6 col-sm-12">
                         <label>Enter a second color</label>
                         <input type="text" v-model="input2" class="form-control" placeholder="Enter Color (HEX)">
                     </div>
-                    
+
                 </div>
 
                 <br>
-                
+
                 <button @click="applyBackground" class="btn btn-success btn-sm"> <i class="material-icons">
-                    check_circle
-                </i> Apply</button>
-                
+                        check_circle
+                    </i> Apply</button>
+
                 <button @click="randomizeBackground" class="btn btn-danger btn-sm"> <i class="material-icons">
-                    check_circle
-                </i> Randomize</button>
+                        check_circle
+                    </i> Randomize</button>
 
                 <button @click="reverseinputs" class="btn btn-warning btn-sm"> <i class="material-icons">
-                    check_circle
-                </i> Reverse</button>
+                        check_circle
+                    </i> Reverse</button>
 
                 <hr>
 
