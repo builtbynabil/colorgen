@@ -1,6 +1,9 @@
-color1 = "#" + Math.random().toString(16).slice(2, 8);
-color2 = "#" + Math.random().toString(16).slice(2, 8);
+color1 = "#" + Math.random().toString(16 + Math.random() * 0.9).slice(2, 8);
+color2 = "#" + Math.random().toString(16 + Math.random() * 0.9).slice(2, 8);
 $("body").css("background-image", "linear-gradient(" + color1 + "," + color2 + ")");
+
+console.log(color1);
+
 
 var app = new Vue({
   el: ".root",
@@ -8,7 +11,7 @@ var app = new Vue({
     title: "bg",
     input: "",
     input2: "",
-    version: "1.02"
+    version: "1.021"
   },
 
   methods: {
@@ -27,7 +30,7 @@ var app = new Vue({
       color =
         "#" +
         Math.random()
-        .toString(16)
+        .toString(16 + Math.random() * 0.9)
         .slice(2, 8);
       this.input = color;
     },
@@ -35,7 +38,7 @@ var app = new Vue({
       color =
         "#" +
         Math.random()
-        .toString(16)
+        .toString(16 + Math.random() * 0.9)
         .slice(2, 8);
       this.input2 = color;
     },
@@ -44,8 +47,8 @@ var app = new Vue({
       $(".block").slideToggle(500)
     },
     randomizeBackground() {
-      color1 = "#" + Math.random().toString(16).slice(2, 8);
-      color2 = "#" + Math.random().toString(16).slice(2, 8);
+      color1 = "#" + Math.random().toString(16 + Math.random() * 0.9).slice(2, 8);
+      color2 = "#" + Math.random().toString(16 + Math.random() * 0.9).slice(2, 8);
       $("body").css("background-image", "linear-gradient(" + color1 + "," + color2 + ")");
 
       this.input = color1

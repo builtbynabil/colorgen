@@ -14,6 +14,11 @@ gradient background generator app created using Vue
 - [x] Better interface to hide the color form [Nothing to do about it]
 - [ ] Integrate color pickers
 
+## Version 1.021
+- [x] Link a instruction page
+- [x] Added box shadow to the white block
+- [x] Change `"#" + Math.random().toString(16).slice(2, 8);` to `"#" + Math.random().toString(16 + Math.random() * 0.9).slice(2, 8);` so that it will randomly generate slightly more colors
+
 ## Version 1.02
 - [x] When you visit the page, the randomly generated background color codes will show in the input boxes
 - [x] Changed the site to be a gradient generated background app
