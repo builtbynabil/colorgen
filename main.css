@@ -12,10 +12,10 @@ body{
 .block{
     background: white;
     border-radius: 20px;
-    margin: 0px;
+    margin: 20px;
     padding: 20px;
     color: black;
-    box-shadow: 2px 2px 5px #2929294d;
+    box-shadow: 10px 10px 10px #2929294d;
     height: 100%;
 }
 

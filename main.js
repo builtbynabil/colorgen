@@ -4,7 +4,7 @@ var app = new Vue({
     title: "bg",
     input: "",
     input2: "",
-    version: "2.21",
+    version: "2.22",
     r: 0,
     g: 0,
     b: 0,
@@ -58,7 +58,8 @@ var app = new Vue({
   },
 
   created() {
-
+    $(".generatorForm").hide()
+    
     this.input = "rgba(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + this.alpha + ")"
     this.input2 = "rgba(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + this.alpha + ")"
 

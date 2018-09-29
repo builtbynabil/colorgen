@@ -39,7 +39,7 @@
                 <!-- START OF FORM -->
 
                 <!-- COLOR PICKER -->
-                <h3 @click="$('.row').slideToggle()">Color Picker</h3>
+                <h3 @click="$('.row').slideToggle(); $('.generatorForm').slideToggle()">Color Picker (Click to hide/show)</h3>
                 <div class="colorpicker">
                     <div class="row">
                         <hr>
@@ -85,7 +85,7 @@
                 <hr>
 
                 <!-- GENERATOR FORM -->
-                <h3 @click="$('.generatorForm').slideToggle()">Generator</h3>
+                <h3 @click="$('.generatorForm').slideToggle(); $('.row').slideToggle()">Generator (Click to hide/show)</h3>
                 <div class="generatorForm">
                     <div class="form-row">
 
@@ -107,7 +107,7 @@
 
                     <h3>Gradient Preview: </h3>
                 </div>
-                
+
                 <div class="showColor2"></div>
                 <br>
 
