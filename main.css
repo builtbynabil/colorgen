@@ -35,14 +35,9 @@ h1{
 .showColor{
     width: 100%;
     height: 100%;
-    text-align: center;
+    padding: 20px;
 }
 
-.showColor p{
-    text-align: center;
-    width: 68%;
-    font-size: 20px;
-    padding-top: 10px;
-    background: rgba(255, 255, 255, 0.185);
-    margin: auto;
+.showColor2{
+    padding: 50px;
 }

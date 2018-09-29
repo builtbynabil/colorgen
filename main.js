@@ -1,12 +1,10 @@
-
-
 var app = new Vue({
   el: ".root",
   data: {
     title: "bg",
     input: "",
     input2: "",
-    version: "2.20",
+    version: "2.21",
     r: 0,
     g: 0,
     b: 0,
@@ -32,9 +30,8 @@ var app = new Vue({
     },
 
     applyBackground() {
-        $("body").css(
-          "background-image",
-          "linear-gradient(" + this.input + "," + this.input2 + ")")
+        $("body").css("background-image","linear-gradient(" + this.input + "," + this.input2 + ")")
+        $(".showColor2").css("background-image","linear-gradient(" + this.input + "," + this.input2 + ")")
     },
 
     toggleform() {
@@ -46,6 +43,7 @@ var app = new Vue({
       this.input2 = "rgba(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + this.alpha + ")"
 
       $("body").css("background-image", "linear-gradient(" + this.input + "," + this.input2 + ")");
+      $(".showColor2").css("background-image", "linear-gradient(" + this.input + "," + this.input2 + ")")
 
     },
 
@@ -54,19 +52,13 @@ var app = new Vue({
       this.input = this.input2
       this.input2 = firstinput
 
-      if (this.input2 == "") {
-        $("body").css("background", this.input);
-      } else {
-        $("body").css(
-          "background-image",
-          "linear-gradient(" + this.input + "," + this.input2 + ")"
-        );
-      }
-
+      this.applyBackground()
+      
     },
   },
 
   created() {
+
     this.input = "rgba(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + this.alpha + ")"
     this.input2 = "rgba(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + this.alpha + ")"
 
@@ -78,6 +70,7 @@ var app = new Vue({
     this.updateColor();
     
     $("body").css("background-image", "linear-gradient(" + this.input + "," + this.input2 + ")");
+    $(".showColor2").css("background-image", "linear-gradient(" + this.input + "," + this.input2 + ")")
     
   }
 });

@@ -1,3 +1,6 @@
+## Version 2.21
+- [x] You can now preview the gradients under the 'Generator' section
+
 ## Version 2.20
 - [x] Refactored the code to make it shorter
 - [x] Now you can apply the color codes to specific inputs by pressing either of the 2 buttons on the Color Picker section

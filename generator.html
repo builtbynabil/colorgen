@@ -39,10 +39,10 @@
                 <!-- START OF FORM -->
 
                 <!-- COLOR PICKER -->
+                <h3 @click="$('.row').slideToggle()">Color Picker</h3>
                 <div class="colorpicker">
-                    <hr>
-                    <h3>Color Picker</h3>
                     <div class="row">
+                        <hr>
 
                         <!-- SLIDER FORM COLUMN -->
                         <div class="col-lg-3">
@@ -50,15 +50,15 @@
                             <!-- RED SLIDER -->
                             <label>Red</label>
                             <input type="range" min="0" max="255" step="1" v-model="r" @input="updateColor" class="form-control-range">
-                            
+
                             <!-- GREEN SLIDER -->
                             <label>Green</label>
                             <input type="range" min="0" max="255" step="1" v-model="g" @input="updateColor" class="form-control-range">
-                            
+
                             <!-- BLUE SLIDER -->
                             <label>Blue</label>
                             <input type="range" min="0" max="255" step="1" v-model="b" @input="updateColor" class="form-control-range">
-                            
+
                             <!-- ALPHA SLIDER -->
                             <label>Alpha (Transparency Of Color) </label>
                             <input type="range" min="0" max="1" step="0.1" v-model="alpha" @input="updateColor" class="form-control-range">
@@ -73,6 +73,7 @@
 
                         <!-- SHOW COLOR COLUMN -->
                         <div class="col-lg-9">
+                            <h1>Color Preview:</h1>
                             <div class="showColor">
                             </div>
                         </div>
@@ -84,8 +85,8 @@
                 <hr>
 
                 <!-- GENERATOR FORM -->
+                <h3 @click="$('.generatorForm').slideToggle()">Generator</h3>
                 <div class="generatorForm">
-                    <h3>Generator</h3>
                     <div class="form-row">
 
                         <div class="col-lg-6 col-sm-12">
@@ -101,6 +102,11 @@
                         </div>
 
                     </div>
+
+                    <br>
+                    
+                    <h3>Gradient Preview: </h3>                    
+                    <div class="showColor2"></div>
                 </div>
 
                 <br>
@@ -112,6 +118,7 @@
                 <button @click="reverseinputs" class="btn btn-warning btn-sm"> <i class="material-icons">
                         check_circle
                     </i> Reverse</button>
+
 
                 <hr>
 
