@@ -9,10 +9,20 @@ var app = new Vue({
     title: "bg",
     input: "",
     input2: "",
-    version: "1.30",
+    version: "2.00",
+    r: 0,
+    g: 0,
+    b: 0,
+    alpha: 1,
+    colorvalue: "",
   },
 
   methods: {
+
+    updateColor() {
+      $(".showColor").css("background-color", "rgba(" + this.r + "," + this.g + "," + this.b + "," + this.alpha + ")")
+      this.colorvalue = "rgba(" + this.r + "," + this.g + "," + this.b + "," + this.alpha + ")"
+    },
 
     applyBackground() {
       if (this.input2 == "") {
@@ -52,9 +62,9 @@ var app = new Vue({
 
       this.input = color1
       this.input2 = color2
-      
+
     },
-    reverseinputs(){
+    reverseinputs() {
       firstinput = this.input
       this.input = this.input2
       this.input2 = firstinput
@@ -74,5 +84,11 @@ var app = new Vue({
   created() {
     this.input = color1
     this.input2 = color2
+    this.r = Math.floor(Math.random() * 255)
+    this.g = Math.floor(Math.random() * 255)
+    this.b = Math.floor(Math.random() * 255)
+
+    this.colorvalue = "rgba(" + this.r + "," + this.g + "," + this.b + "," + 1 + ")"
+    $(".showColor").css("background-color", this.colorvalue)
   }
 });

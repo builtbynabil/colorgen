@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>colorgen</title>
+    <title>Instructions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -17,65 +17,47 @@
 <body>
 
     <div class="root">
-
         <div class="container">
 
             <div class="clickMe" @click="toggleform"></div>
 
             <div class="block">
 
-                <!-- REMEMBER TO ALWAYS UPDATE THE VERSION IN THE MAIN.JS!!! -->
+                <h1>Instructions:</h1>
 
-                <h1> <i class="material-icons">
-                        color_lens
-                    </i> colorgen v{{version}} </h1>
-                <small><a href="instructions.html">Instructions on how to use</a></small>
-
-                <br>
-
-                <small>background randomly generated</small>
+                <h3>Using the color picker</h3>
+                <p>Slide the slider and preview the value on the right hand side, Copy the value on the right hand side to one of the inputs at the 'Generator' section to apply the color</p>
 
                 <hr>
 
-                <div class="form-row">
+                <h3>Using the 'Generator'</h3>
+                
+                <ol>
 
-                    <div class="col-lg-6 col-sm-12">
-                        <label>Enter a color</label>
-                        <input type="text" v-model="input" class="form-control" placeholder="Enter Color (HEX)" @input="applyBackground">
-                    </div>
+                    <h4>Note that the input can take CSS colors such as rgb() and rgba() or just CSS colors like red,
+                        limegreen etc!</h4>
 
-                    <div class="col-lg-6 col-sm-12">
-                        <label>Enter a second color</label>
-                        <input type="text" v-model="input2" class="form-control" placeholder="Enter Color (HEX)" @input="applyBackground">
-                    </div>
+                    <h5>Read more about CSS colors <a href="https://www.w3schools.com/cssref/css_colors_legal.asp">here</a>
+                    </h5>
 
-                </div>
+                    <li>Input both colors and the website will automatically apply the background for you or press the
+                        randomize button which will create a
+                        random
+                        background</li>
+                    <li>Press the top of the page to hide the white box (works on this page also) </li>
+                    <li>Screenshot and crop and make it as your new wallpaper</li>
 
-                <br>
+                </ol>
 
-                <button @click="randomizeBackground" class="btn btn-danger btn-sm"> <i class="material-icons">
-                        check_circle
-                    </i> Randomize</button>
-
-                <button @click="reverseinputs" class="btn btn-warning btn-sm"> <i class="material-icons">
-                        check_circle
-                    </i> Reverse</button>
-
-                <hr>
-
-                <h6><a href="https://github.com/builtbynabil/colorgen">Repo Link</a></h6>
-
+                <a class="btn btn-primary" href="generator.html">Continue To Generator</a>
             </div>
-
         </div>
-
-
     </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
     <script src="main.js"></script>
-
 </body>
 
 </html>

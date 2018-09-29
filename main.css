@@ -29,3 +29,15 @@ i{
 h1{
     font-weight: 700;
 }
+
+.showColor{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.showColor p{
+    width: 30%;
+    margin: auto;
+    background: white;
+}

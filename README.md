@@ -28,8 +28,11 @@ Mini changes to the website / Typo error or user interface improvements
 - [x] Improve the site in terms of UX and UI
 - [ ] Make users able to save images [Right click or hold to save image]
 - [x] Better interface to hide the color form [Nothing to do about it]
-- [ ] Integrate color pickers
+- [x] Integrate color pickers [Integrated color shower where it just shows the color]
 
+## Version 2.00
+- [x] Added color picker
+- [x] Users will be directed to instructions page first (instructions.html is now index.html)
 
 ## Version 1.30
 - [x] The apply button is now gone, this is because the website will automatically apply the background as you type (dynamic inputs)
