@@ -9,12 +9,20 @@ gradient background generator app created using Vue
 - Screenshot and crop and make it as your new wallpaper
 
 ## Version naming convention
+### The new version naming convention is applied after Version 1.021
 The version naming convention is [maj_u].[min_u][mini_u]
-|Name   |   |   |   |   |
-|---|---|---|---|---|
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
+
+##### [maj_u]
+Major Update
+Major update to the website / website technology overhaul
+
+##### [min_u]
+Minor Update
+Little features being added / new button added
+
+##### [mini_u]
+Mini Update
+Mini changes to the website / Typo error or user interface improvements
 
 ## Todos
 - [x] Improve the site in terms of UX and UI
