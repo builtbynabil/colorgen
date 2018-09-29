@@ -4,9 +4,10 @@
 gradient background generator app created using Vue
 
 ## Instructions
-- Input both colors and then press the apply or press the randomize button which will create a random background
-- Press the top of the page to hide the form
-- Screenshot and crop and make it as your new wallpaper
+Instructions [here](https://builtbynabil.github.io/colorgen)
+
+## Changelog
+Changelogs are found [here](https://github.com/builtbynabil/colorgen/blob/master/CHANGELOG.md)
 
 ## Version naming convention
 ### The new version naming convention is applied after Version 1.021
@@ -29,31 +30,3 @@ Mini changes to the website / Typo error or user interface improvements
 - [ ] Make users able to save images [Right click or hold to save image]
 - [x] Better interface to hide the color form [Nothing to do about it]
 - [x] Integrate color pickers [Integrated color shower where it just shows the color]
-
-## Version 2.00
-- [x] Added color picker
-- [x] Users will be directed to instructions page first (instructions.html is now index.html)
-
-## Version 1.30
-- [x] The apply button is now gone, this is because the website will automatically apply the background as you type (dynamic inputs)
-- [x] Let users informed that they can input HTML color in the instructions page
-
-## Version 1.22
-- [x] Changed the instructions page
-- [x] Generates random background on the instructions page
-- [x] Hiding the white box works on the instructions page
-
-## Version 1.021
-- [x] Link a instruction page
-- [x] Added box shadow to the white block
-- [x] Change `"#" + Math.random().toString(16).slice(2, 8);` to `"#" + Math.random().toString(16 + Math.random() * 0.9).slice(2, 8);` so that it will randomly generate slightly more colors
-
-## Version 1.02
-- [x] When you visit the page, the randomly generated background color codes will show in the input boxes
-- [x] Changed the site to be a gradient generated background app
-- [x] Make Reverse Inputs that applied to the randomly generated background!
-- [x] Change the Reverse Inputs button text to Reverse.
-
-## Version 1.01
-- [x] Make so that everytime the user visits the site, it will generate a random gradient background
-- [x] Make Reverse Inputs
