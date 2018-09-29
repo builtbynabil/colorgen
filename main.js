@@ -7,7 +7,8 @@ var app = new Vue({
   data: {
     title: "bg",
     input: "",
-    input2: ""
+    input2: "",
+    version: "1.02"
   },
 
   methods: {
@@ -46,6 +47,10 @@ var app = new Vue({
       color1 = "#" + Math.random().toString(16).slice(2, 8);
       color2 = "#" + Math.random().toString(16).slice(2, 8);
       $("body").css("background-image", "linear-gradient(" + color1 + "," + color2 + ")");
+
+      this.input = color1
+      this.input2 = color2
+      
     },
     reverseinputs(){
       firstinput = this.input
@@ -60,8 +65,12 @@ var app = new Vue({
           "linear-gradient(" + this.input + "," + this.input2 + ")"
         );
       }
-      
-    }
 
+    },
+  },
+
+  created() {
+    this.input = color1
+    this.input2 = color2
   }
 });
