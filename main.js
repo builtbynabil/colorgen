@@ -2,6 +2,7 @@ color1 = "#" + Math.random().toString(16 + Math.random() * 0.9).slice(2, 8);
 color2 = "#" + Math.random().toString(16 + Math.random() * 0.9).slice(2, 8);
 $("body").css("background-image", "linear-gradient(" + color1 + "," + color2 + ")");
 
+$(".colorpicker").hide()
 
 var app = new Vue({
   el: ".root",
@@ -9,7 +10,7 @@ var app = new Vue({
     title: "bg",
     input: "",
     input2: "",
-    version: "2.00",
+    version: "2.10",
     r: 0,
     g: 0,
     b: 0,
@@ -64,6 +65,12 @@ var app = new Vue({
       this.input2 = color2
 
     },
+
+    togglepicker(){
+      $(".colorpicker").slideToggle()
+      $(".generatorForm").slideToggle()
+    },
+    
     reverseinputs() {
       firstinput = this.input
       this.input = this.input2

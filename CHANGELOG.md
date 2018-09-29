@@ -1,3 +1,7 @@
+## Version 2.10
+- [x] Added button to toggle between picker and generator
+- [x] Minor update because its a (quite) big user interface change!
+
 ## Version 2.00
 - [x] Added color picker
 - [x] Users will be directed to instructions page first (instructions.html is now index.html)

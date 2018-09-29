@@ -32,55 +32,66 @@
                 <small><a href="index.html">Instructions on how to use</a></small>
 
                 <br>
-
+                
                 <small>background randomly generated</small>
-
+                
                 <hr>
+
+                <button @click="togglepicker" class="btn btn-secondary btn-sm"> <i class="material-icons">
+                        brush
+                    </i> Toggle Between Picker / Generator</button>
 
                 <!-- START OF FORM -->
 
                 <!-- COLOR PICKER -->
-                <h3>Color Picker</h3>
-                <div class="row">
-                    <div class="col-lg-3">
+                <div class="colorpicker">
+                    <hr>
+                    <h3>Color Picker</h3>
+                    <div class="row">
+                        <div class="col-lg-3">
 
-                        <label>Red</label>
-                        <input type="range" min="0" max="255" step="1" v-model="r" @input="updateColor" class="form-control-range">
+                            <label>Red</label>
+                            <input type="range" min="0" max="255" step="1" v-model="r" @input="updateColor" class="form-control-range">
 
-                        <label>Green</label>
-                        <input type="range" min="0" max="255" step="1" v-model="g" @input="updateColor" class="form-control-range">
+                            <label>Green</label>
+                            <input type="range" min="0" max="255" step="1" v-model="g" @input="updateColor" class="form-control-range">
 
-                        <label>Blue</label>
-                        <input type="range" min="0" max="255" step="1" v-model="b" @input="updateColor" class="form-control-range">
+                            <label>Blue</label>
+                            <input type="range" min="0" max="255" step="1" v-model="b" @input="updateColor" class="form-control-range">
 
-                        <label>Alpha (Transparency Of Color) </label>
-                        <input type="range" min="0" max="1" step="0.1" v-model="alpha" @input="updateColor" class="form-control-range">
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="showColor">
-                            <p>{{colorvalue}}</p>
+                            <label>Alpha (Transparency Of Color) </label>
+                            <input type="range" min="0" max="1" step="0.1" v-model="alpha" @input="updateColor" class="form-control-range">
                         </div>
+                        <div class="col-lg-9">
+                            <div class="showColor">
+                                <p>{{colorvalue}}</p>
+                            </div>
+                        </div>
+
+
                     </div>
-
-
                 </div>
 
                 <hr>
-                
-                <h3>Generator</h3>
-                <!-- COLOR FORM -->
-                <div class="form-row">
 
-                    <div class="col-lg-6 col-sm-12">
-                        <label>Enter a color</label>
-                        <input type="text" v-model="input" class="form-control" placeholder="Enter Color (HEX)" @input="applyBackground">
+                <!-- GENERATOR FORM -->
+                <div class="generatorForm">
+                    <h3>Generator</h3>
+                    <div class="form-row">
+
+                        <div class="col-lg-6 col-sm-12">
+                            <label>Enter a color</label>
+                            <input type="text" v-model="input" class="form-control" placeholder="Enter Color (HEX)"
+                                @input="applyBackground">
+                        </div>
+
+                        <div class="col-lg-6 col-sm-12">
+                            <label>Enter a second color</label>
+                            <input type="text" v-model="input2" class="form-control" placeholder="Enter Color (HEX)"
+                                @input="applyBackground">
+                        </div>
+
                     </div>
-
-                    <div class="col-lg-6 col-sm-12">
-                        <label>Enter a second color</label>
-                        <input type="text" v-model="input2" class="form-control" placeholder="Enter Color (HEX)" @input="applyBackground">
-                    </div>
-
                 </div>
 
                 <br>

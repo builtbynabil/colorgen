@@ -6,6 +6,7 @@ html{
 
 body{
     font-family: 'Karla', sans-serif;
+    height: 100%;
 }
 
 .block{
@@ -15,6 +16,7 @@ body{
     padding: 20px;
     color: black;
     box-shadow: 2px 2px 5px #2929294d;
+    height: 100%;
 }
 
 .clickMe{
@@ -37,7 +39,10 @@ h1{
 }
 
 .showColor p{
-    width: 30%;
+    text-align: center;
+    width: 68%;
+    font-size: 20px;
+    padding-top: 10px;
+    background: rgba(255, 255, 255, 0.185);
     margin: auto;
-    background: white;
 }
